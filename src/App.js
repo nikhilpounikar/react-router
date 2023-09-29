@@ -7,8 +7,9 @@ import { useState } from "react";
 function App() {
   const [isCourses,setIsCourser] = useState(false);
   return (<BrowserRouter>
+    <Route path="/" element={<Nav />} />
     <Routes>
-      <Route path="/" element={<Nav />} />
+      
       <Route path="/hero/*" element={<Hero />} />
       <Route path="/courses/*" element={<Courses couses={isCourses} />} />
     </Routes>
