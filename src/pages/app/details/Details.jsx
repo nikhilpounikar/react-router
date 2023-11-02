@@ -3,6 +3,7 @@ import style from "./Details.module.css";
 import coursesData from "../../../data/courses.json";
 //Third task: import useParams hook
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Details() {
   //Third Task: get course id and match it with the data
@@ -27,7 +28,9 @@ function Details() {
         </div>
       </div>
       {/* Task4: create Link to the Learn Page */}
+      <Link to={`/learn/${course.id}`}>
       <button className={style.button}>Start Learning</button>
+      </Link>
     </div>
   );
 }
