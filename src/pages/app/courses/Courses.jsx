@@ -2,6 +2,8 @@ import React from 'react';
 import style from './Courses.module.css';
 import Card from '../../../components/card';
 import coursesData from '../../../data/courses.json';
+import { Link } from 'react-router-dom';
+
  
 function Courses() {
   return (
@@ -14,12 +16,14 @@ function Courses() {
         {coursesData.map((course, index) => {
           return (
             <div key={index} className={style.card_container}>
+              <Link to={`/courses/${course.id}`}>
               <Card
                 key={course.id}
                 id={course.id}
                 title={course.title}
                 img={course.img}
               />
+              </Link>
             </div>
           );
         })}
