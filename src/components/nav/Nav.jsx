@@ -1,10 +1,8 @@
 import React from "react";
 import style from "./Nav.module.css";
-import { NavLink, Outlet } from "react-router-dom";
 
 function Nav() {
   return (
-    <>
     <nav>
       <div className={style.nav_container}>
         <div className={style.nav_title_wrapper}>
@@ -16,16 +14,10 @@ function Nav() {
           <h4>Coding Ninjas</h4>
         </div>
         <div className={style.nav_details}>
-          <button>
-        <NavLink to="/courses" style={{color:"white"}}>
-          {({isActive})=>(isActive ? "On Courses":"Go To Courses")}
-        </NavLink>
-        </button>
+          <button>Courses</button>
         </div>
       </div>
     </nav>
-    <Outlet/>
-    </>
   );
 }
 
