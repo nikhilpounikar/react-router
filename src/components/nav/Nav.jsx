@@ -32,9 +32,3 @@ function Nav() {
 }
 
 export default Nav;
-
-//  <img
-//    alt='cart-icon'
-//    src='https://cdn-icons-png.flaticon.com/512/4903/4903482.png'
-//    className={`${style.cart_icon} ${style.icon} `}
-//  />;
