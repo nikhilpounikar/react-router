@@ -32,7 +32,7 @@ function Learn() {
               course.chapters.map((chap, index) => {
                 return <div key={index} className={style.chapterId}>
                   
-                  <Link to={`/chapter/${chap.chapter}`}>
+                  <Link to={`./chapter/${chap.chapter}`}>
                   {chap.title}
                   </Link>
                 </div>
@@ -42,9 +42,7 @@ function Learn() {
         </div>
 
         <div className={style.courses}>
-          {
-             <Outlet></Outlet>
-          }
+            <Outlet context={course}/>
         </div>
       </div>
     </div>
